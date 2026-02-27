@@ -60,7 +60,6 @@ form#sign{
     font-weight: 600;
     z-index: 1;
     position: relative;
-    overflow: ;
 }
 form p.p1{
     font-weight: bolder;
@@ -216,3 +215,4 @@ div#contact{
     left: -400px;
     font-size: 18px;
 }
+
