@@ -1,4 +1,4 @@
-**Voting Web**
+**VOTING SYSTEM**
 - This is an online voting system where I used HTML for structure, CSS for styling and Javascript for interactivity.
 - It allows the voter to sign up or login, vote for their preferred candidate and provide a description of the candidates.
 
