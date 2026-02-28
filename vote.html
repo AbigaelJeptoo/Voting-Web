@@ -16,54 +16,58 @@
             Presidency <br>online voting system</span>
             <ul>
                 <li><a href="#sign">Home</a></li>
-  
                 <li><a href="#aspirant">Aspirants</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </div><br><br>
-        <form id="sign" onsubmmit="gotovote()" return false;>
-            <img src="star.jpg" class="africa" alt="/"><br>
-            <p class="p1"><em>SIGN UP TO VOTE</em></p>
-            <section class="part">
-            <label for="username">Username</label><br>
-            <input type="text" placeholder="username" id="username" autocomplete="on" required><br>
-            <label for="ID">ID card</label><br>
-            <input type="file" placeholder="ID" id="ID" required><br>
-            <label for="email">Email address</label><br>
-            <input type="text" placeholder="email" id="email" autocomplete="on" required><br>
-            <label for="password">Password</label><br>
-            <input type="password" placeholder="password" id="password" maxlength="10" size="10" required><br>
-            <label for="date">Date of birth</label><br>
-            <input type="date" placeholder="DOB" id="date" max="2007-02-26" required><br>
-            <label for="number">Phone number</label><br>
-            <input type="number" placeholder="phone" id="number" maxlength="10" required><br>
+        <section class="part" id="sign">
+            
+            <h2 class="p1"><em>SIGN UP TO VOTE</em></h2>
+                    <!--SIGN UP FORM-->
+            <form onsubmit="gotovote(event)">
+            <label for="username">Username<br>
+            <input type="text" placeholder="username" id="username" autocomplete="on" required></label><br>
+            <label for="ID">ID card<br>
+            <input type="file" placeholder="ID" id="ID" required></label><br>
+            <label for="email">Email address<br>
+            <input type="text" placeholder="email" id="email" autocomplete="on" required></label><br>
+            <label for="password">Password<br>
+            <input type="password" placeholder="password" id="password" maxlength="10" size="10" required></label><br>
+            <label for="date">Date of birth<br>
+            <input type="date" placeholder="DOB" id="date" max="2007-02-26" required></label><br>
+            <label for="number">Phone number<br>
+            <input type="number" placeholder="phone" id="number" maxlength="10" required></label><br>
             <input type="submit" value="Sign Up" id="signup" onclick="gotovote()">
             <p style="position: relative;bottom: 16px;">Already have an account
-            <button type="button" class="button1" onclick="displayLogin() "><a href="#">LOG IN</a></button></p>
-            </section>
-        </form>
+            <button type="button" class="button1" onclick="displayLogin() ">LOG IN</button></p>
+            </form>
+            
+        </section>
 
-        <div id="login" style="display: none;">
-            <form action="/">
-            <p class="p2"><em>LOG IN TO VOTE</em></p>
-            <label for="username">Username</label><br>
-            <input type="text" placeholder="username" id="username" autocomplete="off"><br>
-            <label for="email">Email address</label><br>
-            <input type="text" placeholder="email" id="email" autocomplete="off"><br>
-            <label for="password">Password</label><br>
-            <input type="password" placeholder="password" id="password" maxlength="10" size="10"><br>
+        <section class="part" style="display: none;" id="login">
+            
+            <h2 class="p1"><em>LOG IN TO VOTE</em></h2>
+            <form onsubmit="gotovote(event)">
+            <label for="username">Username<br>
+            <input type="text" placeholder="username" id="username" autocomplete="on"></label><br>
+            <label for="email">Email address<br>
+            <input type="text" placeholder="email" id="email" autocomplete="on"></label><br>
+            <label for="password">Password<br>
+            <input type="password" placeholder="password" id="password" maxlength="10" size="10"></label><br>
             <input type="submit" value="Submit" id="log1">
             <p class="p3" style="font-weight: 600;">Do not have an account
-                <button type="button" onclick="displaySignup()" class="button2"><a href="#">SIGN UP</a></button>
+            <button type="button" onclick="displaySignup()" class="button1">SIGN UP</button>
             </p>
             </form>
-        </div>
+           
+        </section>
 
         <div id="vote" style="display: none;">
-            <h2>Give your vote!!!</h2>       
+            <h2>Give your vote!!!</h2> 
+            <div class="vote-list">     
         <label>
             <input type="radio" name="vote" id="maker" value="maker">
-            Anyieth Maker
+            Anok Yai
         </label><br>      
            <label>
             <input type="radio" name="vote" id="idris" value="idris">
@@ -75,10 +79,10 @@
             </label><br>
             <label>
                 <input type="radio" name="vote" id="damingo" value="damingo">
-                Colman Damingo
-            </label><br>
-            <button class="butvote" onclick="myVote(); displayResult();">Submit vote</button><br>
-            
+                Michael B. Jordan
+            </label>
+            </div> 
+            <button class="butvote" onclick="myVote(); displayResult();">Submit vote</button><br>         
             
         <div id="result" style="display: none;">
             <table>
@@ -101,34 +105,34 @@
         </div>
         </div>
 
-        <div id="aspirant">
-            <div class="ap1">
-                <img height="300px" width="250px"src="https://i.pinimg.com/736x/89/86/8e/89868ed2327b93bfbdb6a760219c6665.jpg">
-                <br>Name: Miss.Anok Yai<br>
+        <div id="aspirants">
+            <div class="aspirant">
+                <img src="https://i.pinimg.com/736x/89/86/8e/89868ed2327b93bfbdb6a760219c6665.jpg">
+                <br>Name: Anok Yai<br>
                 Age: 22 years old<br>
                 Country: South sudanese<br>
                 Occupation: CEO Maker youth society<br>
                 #<b style="color: yellowgreen;">Youth is the real power of the nation</b>
             </div>
-            <div class="ap2">
-                <img height="300px" width="250px" src="https://i.pinimg.com/736x/63/7d/b1/637db16e32f8cdcea16ee87d51fed410.jpg">
-                <br>Name: Mr.Damson Idris<br>
+            <div class="aspirant">
+                <img src="https://i.pinimg.com/736x/63/7d/b1/637db16e32f8cdcea16ee87d51fed410.jpg">
+                <br>Name: Damson Idris<br>
                 Age: 25 years old<br>
                 Nationality: Nigerian<br>
                 Occupation: Lawyer<br>
                 #<b style="color: yellowgreen;">Youth are the makers</b>
             </div>
-            <div class="ap3">
-                <img height="300px" width="250px" src="https://i.pinimg.com/736x/65/a2/41/65a241c7aa2dc4de73cb164aa3883c1e.jpg">
-                <br>Name: Miss.Lupita Nyong'o<br>
+            <div class="aspirant">
+                <img src="https://i.pinimg.com/736x/65/a2/41/65a241c7aa2dc4de73cb164aa3883c1e.jpg">
+                <br>Name: Lupita Nyong'o<br>
                 Age: 28 years old<br>
                 Nationality: Kenyan<br>
                 Occupation: Founder Together Homes<br>
                 #<b style="color: yellowgreen">Channelizing youth power for <br>nation building</b>
             </div>
-            <div class="ap4">
-                <img height="300px" width="250px" src="https://i.pinimg.com/736x/d2/30/ac/d230ac7c8f2c8efd383570a319389bc9.jpg">
-                <br>Name: Mr.Colman Damingo<br>
+            <div class="aspirant">
+                <img src="https://i.pinimg.com/736x/d2/30/ac/d230ac7c8f2c8efd383570a319389bc9.jpg">
+                <br>Name: Michael B. Jordan<br>
                 Age: 26 years old<br>
                 Nationality: South African<br>
                 Occupation: Model and actor<br>

@@ -9,9 +9,12 @@ function displaySignup(){
 }
 
 //direct to vote once you sign up
-function gotovote(){
+function gotovote(event){
+    event.preventDefault()// stops page from refreshing
+    
     document.getElementById("sign").style.display = "none";
-    document.getElementById("vote").style.display = "block";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("vote").style.display = "flex";
 }
 
 function displayResult(){
@@ -59,5 +62,6 @@ function myVote(){
     //disable once you vote
     document.querySelectorAll('input[name="vote"]').forEach(input => input.disabled = true);
     document.querySelector('.butvote').disabled = true
+
 
 }
